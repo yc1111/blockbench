@@ -1,6 +1,6 @@
 #!/bin/bash
 # args=THREADS index N txrate
-echo IN START_CLIENTS $1 $2 $3 $4
+echo "[*] start-clients" $1 $2 $3 $4
 
 cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
@@ -21,6 +21,7 @@ for host in `cat $HOSTS`; do
   if [[ $n -eq $2 ]]; then
     cd $EXE_HOME
     #both ycsbc and smallbank use the same driver
+    #-P workloads/workloada.spec for smallbank
     nohup ./driver -db ethereum -threads $1 -P workloads/workloada.spec -endpoint $host:8000 -txrate $4 > $LOG_DIR/client_$host"_"$1 2>&1 &
   fi
 done
