@@ -11,7 +11,7 @@ if [ ! -f "$GOTAR" ]; then
   tar -zxvf $GOTAR
   export GOROOT=`pwd`/go
   export PATH=`pwd`/go/bin:$PATH
-  export GOPATH=`pwd`/go/workspace
+  export GOPATH=`pwd`/go
 fi
 cd $HL_DATA/go
 

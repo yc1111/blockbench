@@ -1,7 +1,14 @@
 version: '2'
+
 networks:
   basic:
+
+volumes:
+  peer1.org1.example.com:
+#  couchdb1:
+
 services:
+
   peer1.org1.example.com:
     container_name: peer1.org1.example.com
     image: hyperledger/fabric-peer
@@ -21,37 +28,39 @@ services:
       - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/peers/tls/server.key
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/peers/tls/ca.crt
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=${COMPOSE_PROJECT_NAME}_basic
-      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb1:5984
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+#      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+#      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb1:5984
+#      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+#      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: peer node start
     ports:
       - 8051:7051
       - 8053:7053
     volumes:
-        - /var/run/:/host/var/run/
-        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp:/etc/hyperledger/peers/msp
-        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls:/etc/hyperledger/peers/tls
-        - ./crypto-config/peerOrganizations/org1.example.com/users:/etc/hyperledger/users/msp
-        - ./config:/etc/hyperledger/configtx
+      - /var/run/:/host/var/run/
+      - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp:/etc/hyperledger/peers/msp
+      - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls:/etc/hyperledger/peers/tls
+      - ./crypto-config/peerOrganizations/org1.example.com/users:/etc/hyperledger/users/msp
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/etc/hyperledger/orderers/msp
+      - ./config:/etc/hyperledger/configtx
+      - peer1.org1.example.com:/var/hyperledger/production
     extra_hosts:
-    - "orderer.example.com:$PEER"
-    - "peer0.org1.example.com:$PEER"
-    - "ca.example.com:$PEER"
-    depends_on:
-      - couchdb1
+      - "orderer.example.com:$PEER"
+      - "peer0.org1.example.com:$PEER"
+      - "ca.example.com:$PEER"
+#    depends_on:
+#      - couchdb1
     networks:
       - basic
 
-  couchdb1:
-    container_name: couchdb1
-    image: hyperledger/fabric-couchdb
-    environment:
-      - COUCHDB_USER=
-      - COUCHDB_PASSWORD=
-    ports:
-      - 6984:5984
-    networks:
-      - basic
+#  couchdb1:
+#    container_name: couchdb1
+#    image: hyperledger/fabric-couchdb
+#    environment:
+#      - COUCHDB_USER=
+#      - COUCHDB_PASSWORD=
+#    ports:
+#      - 6984:5984
+#    networks:
+#      - basic
