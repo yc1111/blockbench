@@ -15,7 +15,7 @@ The performance of blockchain systems is a critical issue. To understand the per
 * Analytics (data model layer).
 * CPUHeavy (execution layer).
 
-## Source file structure
+### Source file structure
 
 * Smart contract sources are in [benchmark/contracts](benchmark/contracts) directory.
 * Drivers for benchmark workloads are in [src](src) directory.
@@ -34,31 +34,51 @@ Go to [micro](src/micro) directory and use `npm install` to install the dependen
 * [zipfian](https://www.npmjs.com/package/zipfian)
 * [bignumber.js](https://www.npmjs.com/package/bignumber.js)
 
-### Install
+# Quorum
 
-## Quorum
+## Install
 * Go to [benchmark/quorum_raft/quorum](benchmark/quorum_raft/quorum) directory and use `make` to build the geth executable
 
-## Hyerledger v1.3
+## Running the Macro Benchmark
 
-### Running the Macro Benchmark
-
-## Quorum Raft
+### Quorum Raft
 * Go to [benchmark/quorum_raft](benchmark/quorum_raft) directory
 * Modify the file `env.sh` to choose the YCSB or Smallbank by uncommenting and commetting the respective lines
 * Run  `run-bench.sh <n_servers> <n_threads> <n_clients> <tx_rate>` to run the network and the macro benchmark
 
-## Quorum IBFT
+### Quorum IBFT
 * Go to [benchmark/quorum_ibft](benchmark/quorum_ibft) directory
 * Modify the file `env.sh` to choose the YCSB or Smallbank by uncommenting and commetting the respective lines
 * Run  `run-bench.sh <n_servers> <n_threads> <n_clients> <tx_rate>` to run the network and the macro benchmark
 
-## Hyperledger v1.3 
-
 ### Running the Micro Benchmark
-
-## Quorum
 * Go to [src/micro/quorum_script](src/micro/quorum_script) directory
 * Run the single node by executing `start_client.sh`
 * On another terminal, go to the folder of the benchmark you intend to run located at [src/micro/<benchmark_name>](src/micro)
 * See the Readme for the instructions relative to that micro benchmark
+
+# Hyperledger 1.3
+
+## Install
+
+1. Go to [benchmark/hyperledger-1.3/single]
+
+2. In `env.sh`, specify the following
+
+* HOSTS        Path of file storing IP of servers
+* CLIENTS      Path of file storing IP of clients
+* HL_DATA      Installing directory of GO
+* LOG_DIR      Server and client log directory
+* BENCHMARK    one of the ycsb, smallbank, donothing
+* EXE_HOME     Path of client driver
+
+3. Run `./install`
+This script will install GO and hyperledger fabric-samples in specified directory
+
+## Run Macro Benchmarks
+
+1. Under [benchmark/hyperledger-1.3/single], run `./run <n_servers> <n_threads> <tx_rate>`
+
+2. Results are shown in client log under log directory specified.
+
+3. Get throughput by running `python parse-all.py <n_threads> <tx_rate>`
