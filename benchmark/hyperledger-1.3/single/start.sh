@@ -22,7 +22,7 @@ docker exec cli peer channel create -o orderer.example.com:7050 -c mychannel -f 
 # Join channel
 for org in {1..2}
 do
-  for peer in {0..1}
+  for peer in {0..3}
   do
     docker exec -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org${org}.example.com/users/Admin@org${org}.example.com/msp" -e "CORE_PEER_ADDRESS=peer${peer}.org${org}.example.com:7051" -e "CORE_PEER_LOCALMSPID="Org${org}MSP"" -e "CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org${org}.example.com/peers/peer${peer}.org${org}.example.com/tls/ca.crt" cli peer channel join -b mychannel.block
   done

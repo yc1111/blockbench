@@ -18,16 +18,16 @@ CLIENTS=$HL_HOME/clients
 HL_DATA=/data/yuecong
 
 # Hyperledger fabric source folder (install.sh puts go in $HL_DATA)
-HL_SOURCE=$HL_DATA/go/src/github.com/hyperledger1.3/fabric-samples/bin
+HL_SOURCE=$HL_DATA/go/src/github.com/hyperledger1.3/single/
 
 # Log dir
 LOG_DIR=$HL_HOME/logs
 
 # Define benchmark, which can be: donothing, ycsb or smallbank
-BENCHMARK=ycsb
+BENCHMARK=smallbank
 
 # For ycsb and donothing, the driver is in src/macro/kvstore
-EXE_HOME=$HL_HOME/../../src/macro/kvstore
+EXE_HOME=$HL_HOME/../../../src/macro/smallbank
 
 # For smallbank, the driver is in src/macro/smallbank (uncomment)
 # EXE_HOME=$HL_HOME/../../src/macro/smallbank

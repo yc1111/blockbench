@@ -8,6 +8,9 @@ export COMPOSE_PROJECT_NAME=fabric
 
 mkdir -p $FABRIC_HOME
 
+cp crypto-config-$1.yaml crypto-config.yaml
+cp docker-compose-cli-$1.yaml docker-compose-cli.yaml
+cp base/docker-compose-base-$1.yaml base/docker-compose-base.yaml
 cp crypto-config.yaml $FABRIC_HOME
 cp configtx.yaml $FABRIC_HOME
 cp docker-compose-cli.yaml $FABRIC_HOME
