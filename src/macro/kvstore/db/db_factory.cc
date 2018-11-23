@@ -27,7 +27,7 @@ DB* DBFactory::CreateDB(utils::Properties& props) {
     return new HyperLedgerDB(endpoint, wl_name);
   } else if (props["dbname"] == "ethereum" || props["dbname"] == "parity") {
     const string endpoint = props["endpoint"];
-    int deploy_wait = stoi(props.GetProperty("deploy_wait", "20"));
+    int deploy_wait = stoi(props.GetProperty("deploy_wait", "60"));
     string wl_name = props.GetProperty("workload", "donothing");
     return new EVMDB(endpoint, props["dbname"], wl_name, deploy_wait);
   } else {

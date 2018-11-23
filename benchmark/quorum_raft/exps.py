@@ -7,9 +7,9 @@ import sys
 # running experiments
 RATES=[8]
 THREADS=[32]
-EXPS=[(32,8), (16,8), (16,16)]
+EXPS=[(8, 8),(8, 16),(16, 16), (8,32)]
 ENV='env.sh'
-NNODES=[4,8,16]
+NNODES=[8]
 
 def change_config(run_no):
   f = open(ENV,'r')
@@ -50,15 +50,6 @@ if __name__=='__main__':
   if len(sys.argv)==2 and (not sys.argv in opts):
     print error_msg
 
-  cp_cmd='cp env_ycsb.sh env.sh'
-  os.system(cp_cmd)
-  change_config(1)
-  for n in NNODES:
-    if len(sys.argv)>1 and sys.argv[1]=='-security':
-      run_exp(n,True)
-    else:
-      run_exp(n, False)
-
   # do-nothing option
   if len(sys.argv)>1 and sys.argv[1]=='-donothing':
     time.sleep(10)
@@ -67,5 +58,20 @@ if __name__=='__main__':
     change_config(1)
     for n in NNODES:
       run_exp(n, False)
+  else:
+    cp_cmd='cp env_ycsb.sh env.sh'
+    os.system(cp_cmd)
+    change_config(1)
+    for n in NNODES:
+      if len(sys.argv)>1 and sys.argv[1]=='-security':
+        run_exp(n,True)
+      else:
+        run_exp(n, False)
+
+#    cp_cmd = 'cp env_smallbank.sh env.sh'
+#    os.system(cp_cmd)
+#    change_config(1)
+#    for n in NNODES:
+#      run_exp(n, False)
 
   print 'Done!'

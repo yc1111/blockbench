@@ -34,7 +34,7 @@ export GOPATH=$HL_DATA/go
 export PATH=$PATH:$HL_DATA/go/bin
 
 # rocksdb lib
-export LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH=/users/yuecong/local/lib
 
 HOST=`hostname`
 nohup $PEER node start > $LOG_DIR/hl_log_slave_$HOST 2>&1 &

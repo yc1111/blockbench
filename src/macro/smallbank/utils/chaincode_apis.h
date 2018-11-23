@@ -437,14 +437,28 @@ inline std::vector<std::string> poll_txs_by_block_hash(const std::string &endpoi
   return ret;
 }
 
+inline std::string to_hex(int block_number) {
+  std::string result;
+  while (block_number > 0) {
+    int a = block_number % 16;
+    block_number /= 16;
+    if ( a >= 10) {
+      char b = 'a' + (a-10);
+      result = std::string(1, b) + result;
+    } else {
+      result = std::to_string(a) + result;
+    }
+  }
+  result = "0x" + result;
+  return result;
+}
+
 inline std::vector<std::string> poll_txs_by_block_number(const std::string &endpoint,
                                                   int block_number) {
   std::string request = GET_BLOCK_BY_NUMBER_PREFIX +
-                        std::to_string(block_number) +
+                        to_hex(block_number) +
                         GET_BLOCK_BY_NUMBER_SUFFIX;
-
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, request);
-
   std::vector<std::string> ret = get_list_field(r, "transactions");
   std::vector<std::string> uncles = get_list_field(r, "uncles");
   for (std::string uncle : uncles) {
@@ -453,6 +467,5 @@ inline std::vector<std::string> poll_txs_by_block_number(const std::string &endp
   }
   return ret;
 }
-
 
 #endif

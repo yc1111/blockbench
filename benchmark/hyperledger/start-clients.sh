@@ -22,6 +22,7 @@ for host in `cat $HOSTS`; do
 	let i=i+1
 	if [[ $n -eq $INDEX ]]; then
 		cd $EXE_HOME
+                export LD_LIBRARY_PATH=/users/yuecong/local/lib
 		if ! [ -e ./driver ]; then
 			echo "Please compile the driver in $EXE_HOME"
 			exit 1

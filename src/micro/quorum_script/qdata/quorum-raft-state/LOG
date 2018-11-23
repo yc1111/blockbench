@@ -1,0 +1,8 @@
+=============== Nov 23, 2018 (SGT) ===============
+00:01:33.935251 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:01:34.201258 db@open opening
+00:01:34.203003 version@stat F·[] S·0B[] Sc·[]
+00:01:34.450228 db@janitor F·2 G·0
+00:01:34.450248 db@open done T·248.973309ms
+00:12:23.614735 db@close closing
+00:12:23.614766 db@close done T·29.512µs

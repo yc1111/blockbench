@@ -312,16 +312,20 @@ std::string deploy_smart_contract(const std::string &endpoint,
   std::string txn_data = DEPLOY_SMARTCONTRACT_PREFIX + from_address;
   switch (type) {
     case SmartContractType::KVStore:
+      std::cout << "@@@@@ kvstore: " << endpoint << ", " << from_address << std::endl;
       txn_data += DEPLOY_KV_SMARTCONTRACT_SUFFIX;
       break;
     case SmartContractType::SmallBank:
+      std::cout << "@@@@@ smallbank: " << endpoint << ", " << from_address << std::endl;
       txn_data += DEPLOY_SB_SMARTCONTRACT_SUFFIX;
       break;
     case SmartContractType::DoNothing:
+      std::cout << "@@@@@ donothing: " << endpoint << ", " << from_address << std::endl;
       txn_data += DEPLOY_DONOTHING_SMARTCONTRACT_SUFFIX;
       break;
   }
-  auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, txn_data);
+  auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, txn_data);\
+  std::cout << "@@@@@@ result: " << r << std::endl;
   return get_json_field(r, "result");
 }
 
@@ -330,7 +334,7 @@ std::string lookup_smart_contract_address_or_die(const std::string &endpoint,
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS,
                                 GET_SMART_CONTRACT_ADDRESS_PREFIX + receipt +
                                     GET_SMART_CONTRACT_ADDRESS_SUFFIX);
-
+  std::cout << "@@@@@@@@ Lookup: " << receipt << ", " << r << std::endl;
   assert(r.find("\"result\":null") == std::string::npos);
   return get_json_field(r, "contractAddress");
 }

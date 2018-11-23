@@ -84,14 +84,14 @@ int StatusThread(DB* sb, string dbname, string endpoint, double interval, int st
     confirm_duration = PARITY_CONFIRM_BLOCK_LENGTH;
   else
     confirm_duration = HL_CONFIRM_BLOCK_LENGTH;
-
+  
   while(true){
     start_time = time_now(); 
     int tip = sb->get_tip_block_number(); 
     if (tip==-1) // fail
       sleep(interval); 
     while (cur_block_height + confirm_duration <= tip) {      
-      vector<string> txs = sb->poll_tx(cur_block_height); 
+      vector<string> txs = sb->poll_tx(cur_block_height);
       cout << "polled block " << cur_block_height << " : " << txs.size() 
            << " txs " << endl; 
       cur_block_height++;           
@@ -117,7 +117,7 @@ int StatusThread(DB* sb, string dbname, string endpoint, double interval, int st
     latency = 0; 
 
     end_time = time_now(); 
-
+    cout << "SLEEP TIME: " << interval - (end_time - start_time) / 1000000000.0 << endl;
     //sleep in nanosecond
     utils::sleep(interval - (end_time - start_time) / 1000000000.0);
   }
@@ -127,7 +127,7 @@ return 0;
 DB* CreateDB(std::string dbname, std::string endpoint) {
   if (dbname == "hyperledger") {
     return SmallBank::GetInstance("SmallbankExample", endpoint); 
-  } else if (dbname == "") {
+  } else if (dbname == "hl1.3") {
     return HLDB::GetInstance(dbname, endpoint);
   } else if (dbname == "ethereum" || dbname == "parity") {
     return EVMDB::GetInstance(dbname, endpoint); 

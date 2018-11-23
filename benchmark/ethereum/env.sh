@@ -1,11 +1,11 @@
-ETH_HOME=/users/dinhtta/anh/blockchain-perf/benchmark/ethereum
+ETH_HOME=/users/yuecong/blockbench/benchmark/ethereum
 HOSTS=$ETH_HOME/hosts
 CLIENTS=$ETH_HOME/clients
-ETH_DATA=/data/dinhtta/eth
-LOG_DIR=$ETH_HOME/donothing_donothingresults_1
-EXE_HOME=/users/dinhtta/anh/wangji_3/blockchain-perf/src/donothing
-BENCHMARK=ycsb
+ETH_DATA=/users/yuecong/eth_data
+LOG_DIR=$ETH_HOME/logs_dir
+EXE_HOME=/users/yuecong/blockbench/src/macro/kvstore
+BENCHMARK=kvstore
 
-##comment these out for smallbank
+#comment these out for smallbank
 #EXE_HOME=$ETH_HOME/../../src/smallbank/ethereum/ycsb
 #BENCHMARK=smallbank

@@ -39,13 +39,13 @@ string HLDB::get_json_field(const std::string &json,
 }
 
 vector<string> HLDB::find_tx(string json){
-  cout << json << endl;
   vector<string> ss;
-  unsigned int key_pos = json.find("tx_id");
+  auto key_pos = json.find("tx_id");
   while (key_pos!=string::npos){
     auto quote_sign_pos_1 = json.find('\"', key_pos + 1);
     auto quote_sign_pos_2 = json.find('\"', quote_sign_pos_1 + 1);
     auto quote_sign_pos_3 = json.find('\"', quote_sign_pos_2 + 1);
+    string temp = json.substr(quote_sign_pos_2 + 1, quote_sign_pos_3 - quote_sign_pos_2 - 1);
     ss.push_back(json.substr(quote_sign_pos_2 + 1,
           quote_sign_pos_3 - quote_sign_pos_2 - 1));
     key_pos = json.find("tx_id", quote_sign_pos_3+1);
@@ -54,7 +54,6 @@ vector<string> HLDB::find_tx(string json){
 }
 
 int HLDB::find_tip(string json){
-  cout << json << endl;
   if (json.find("Failed")!=string::npos)
     return -1;
   int key_pos = json.find("height");
@@ -65,13 +64,18 @@ int HLDB::find_tip(string json){
 }
 
 vector<string> HLDB::poll_tx(int block_number) {
-  string command = PREFIX + "peer channel fetch " + to_string(block_number) + "-c mychannel";
+  string command = PREFIX + "peer channel fetch " + to_string(block_number) + " -c mychannel";
+  system(command.c_str());
+  command = PREFIX + "cat mychannel_" + to_string(block_number) + ".block > mychannel_" + to_string(block_number) + ".block";
+  system(command.c_str());
+  command = "configtxlator proto_decode --type=common.Block --input=mychannel_" + to_string(block_number) + ".block --output=mychannel_" + to_string(block_number) + ".json";
+  system(command.c_str());
+  command = "cat mychannel_" + to_string(block_number) + ".json";
   return find_tx(exec(command.c_str()));
 }
 
 unsigned int HLDB::get_tip_block_number(){
   string command = PREFIX + "peer channel getinfo -c mychannel";
-  cout << command << endl;
   return find_tip(exec(command.c_str()));
 }
 
@@ -88,7 +92,7 @@ void HLDB::Amalgate(unsigned acc1, unsigned acc2) {
           \"" + to_string(acc2) + "\" \
           ] \
       }'";
-  cout << command << endl;
+  //cout << command << endl;
   system(command.c_str());
 }
 
@@ -100,7 +104,7 @@ void HLDB::GetBalance(unsigned acc) {
           \"" + to_string(acc) + "\" \
           ] \
       }'";
-  cout << command << endl;
+  //cout << command << endl;
   system(command.c_str());
 }
 
@@ -113,7 +117,7 @@ void HLDB::UpdateBalance(unsigned acc, unsigned amount) {
           \"" + to_string(amount) + "\" \
           ] \
       }'";
-  cout << command << endl;
+  //cout << command << endl;
   system(command.c_str());
 }
 
@@ -126,7 +130,7 @@ void HLDB::UpdateSaving(unsigned acc, unsigned amount) {
           \"" + to_string(amount) + "\" \
           ] \
       }'";
-  cout << command << endl;
+  //cout << command << endl;
   system(command.c_str());
 }
 
@@ -140,7 +144,7 @@ void HLDB::SendPayment(unsigned acc1, unsigned acc2, unsigned amount) {
           \"" + to_string(amount) + "\" \
           ] \
       }'";
-  cout << command << endl;
+  //cout << command << endl;
   system(command.c_str());
 }
 
@@ -153,7 +157,7 @@ void HLDB::WriteCheck(unsigned acc, unsigned amount) {
           \"" + to_string(amount) + "\" \
           ] \
       }'";
-  cout << command << endl;
+  //cout << command << endl;
   system(command.c_str());
 }
 

@@ -1,0 +1,41 @@
+@@@@@ kvstore: 10.0.0.9:8000, 0x06f8337ab1e5016473d592ff874aef64cef01994
+@@@@@@ result: {"jsonrpc":"2.0","id":1,"result":"0xb7153f9c3b4efaf1948cf68a7f555adcdd1a1f7b1d20028f4a3fb34cf7a0446f"}
+
+@@@@@@@@ Lookup: 0xb7153f9c3b4efaf1948cf68a7f555adcdd1a1f7b1d20028f4a3fb34cf7a0446f, {"jsonrpc":"2.0","id":1,"result":{"blockHash":"0x9cfc843446d7d41c1f771b81444cfabbf05dc5ebb3250deed1e2f40377c2597e","blockNumber":"0x2","contractAddress":"0x2cf5c6109f51d5312729be28e7c6754264604c98","cumulativeGasUsed":"0xd98ae","from":"0x06f8337ab1e5016473d592ff874aef64cef01994","gasUsed":"0x4883a","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","root":"0x4afe06dafb23f72f5d6f37d14ef375d2baaef884a2d6c648b8aa0937d88f6dc2","to":null,"transactionHash":"0xb7153f9c3b4efaf1948cf68a7f555adcdd1a1f7b1d20028f4a3fb34cf7a0446f","transactionIndex":"0x2"}}
+
+to address: 0x2cf5c6109f51d5312729be28e7c6754264604c98
+Smart contract ycsb deploy ready
+Current TIP = 4
+In the last 10s, tx count = 0 latency = 0.00424573 outstanding request = 0
+In the last 10s, tx count = 0 latency = 0 outstanding request = 1131
+In the last 10s, tx count = 0 latency = 0 outstanding request = 2051
+In the last 10s, tx count = 0 latency = 0 outstanding request = 2960
+polled block 4 : 6 txs 
+polled block 5 : 756 txs 
+polled block 6 : 1969 txs 
+In the last 10s, tx count = 272 latency = 10596.9 outstanding request = 3752
+polled block 7 : 2122 txs 
+In the last 10s, tx count = 236 latency = 11041.2 outstanding request = 4485
+In the last 10s, tx count = 0 latency = 0 outstanding request = 5643
+In the last 10s, tx count = 0 latency = 0 outstanding request = 6812
+polled block 8 : 1503 txs 
+In the last 10s, tx count = 1503 latency = 106726 outstanding request = 5758
+polled block 9 : 424 txs 
+polled block 10 : 120 txs 
+In the last 10s, tx count = 544 latency = 37064.4 outstanding request = 5654
+In the last 10s, tx count = 0 latency = 0 outstanding request = 6292
+In the last 10s, tx count = 0 latency = 0 outstanding request = 6709
+In the last 10s, tx count = 0 latency = 0 outstanding request = 7207
+In the last 10s, tx count = 0 latency = 0 outstanding request = 7787
+polled block 11 : 32 txs 
+In the last 10s, tx count = 32 latency = 3773.99 outstanding request = 7891
+In the last 10s, tx count = 0 latency = 0 outstanding request = 8817
+In the last 10s, tx count = 0 latency = 0 outstanding request = 9978
+In the last 10s, tx count = 0 latency = 0 outstanding request = 11191
+In the last 10s, tx count = 0 latency = 0 outstanding request = 12329
+polled block 12 : 2648 txs 
+In the last 10s, tx count = 0 latency = 0 outstanding request = 13039
+polled block 13 : 4858 txs 
+polled block 14 : 724 txs 
+polled block 15 : 91 txs 
+In the last 10s, tx count = 0 latency = 0 outstanding request = 13456

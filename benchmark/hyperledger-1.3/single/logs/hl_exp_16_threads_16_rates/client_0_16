@@ -1,86 +1,176 @@
 Current TIP = 4
-polled block 4 : 10 txs 
 In the last 2s, tx count = 0 latency = 0.00425018 outstanding request = 0
-SLEEP TIME: -0.226645
-polled block 5 : 10 txs 
-polled block 6 : 10 txs 
-polled block 7 : 10 txs 
-polled block 8 : 10 txs 
-polled block 9 : 10 txs 
+SLEEP TIME: 1.02706
+polled block 4 : 58 txs 
 In the last 2s, tx count = 0 latency = 0 outstanding request = 0
-SLEEP TIME: -6.81555
-polled block 10 : 10 txs 
-polled block 11 : 10 txs 
-polled block 12 : 10 txs 
-polled block 13 : 10 txs 
-polled block 14 : 10 txs 
-polled block 15 : 10 txs 
-polled block 16 : 10 txs 
-polled block 17 : 10 txs 
-polled block 18 : 10 txs 
-polled block 19 : 10 txs 
-polled block 20 : 10 txs 
-polled block 21 : 10 txs 
-polled block 22 : 10 txs 
-polled block 23 : 10 txs 
-polled block 24 : 10 txs 
-polled block 25 : 10 txs 
-polled block 26 : 10 txs 
-polled block 27 : 10 txs 
-polled block 28 : 10 txs 
-polled block 29 : 10 txs 
-polled block 30 : 10 txs 
-polled block 31 : 10 txs 
+SLEEP TIME: -0.0561441
 In the last 2s, tx count = 0 latency = 0 outstanding request = 0
-SLEEP TIME: -29.8866
-polled block 32 : 10 txs 
-polled block 33 : 10 txs 
-polled block 34 : 10 txs 
-polled block 35 : 10 txs 
-polled block 36 : 10 txs 
-polled block 37 : 10 txs 
-polled block 38 : 10 txs 
-polled block 39 : 10 txs 
-polled block 40 : 10 txs 
-polled block 41 : 10 txs 
-polled block 42 : 10 txs 
-polled block 43 : 10 txs 
-polled block 44 : 10 txs 
-polled block 45 : 10 txs 
-polled block 46 : 10 txs 
-polled block 47 : 10 txs 
-polled block 48 : 10 txs 
-polled block 49 : 10 txs 
-polled block 50 : 10 txs 
-polled block 51 : 10 txs 
-polled block 52 : 10 txs 
-polled block 53 : 10 txs 
-polled block 54 : 10 txs 
-polled block 55 : 10 txs 
-polled block 56 : 10 txs 
-polled block 57 : 10 txs 
-polled block 58 : 10 txs 
-polled block 59 : 10 txs 
-polled block 60 : 10 txs 
-polled block 61 : 10 txs 
-polled block 62 : 10 txs 
-polled block 63 : 10 txs 
-polled block 64 : 10 txs 
-polled block 65 : 10 txs 
-polled block 66 : 10 txs 
-polled block 67 : 10 txs 
-polled block 68 : 10 txs 
-polled block 69 : 10 txs 
-polled block 70 : 10 txs 
-polled block 71 : 10 txs 
-polled block 72 : 10 txs 
-polled block 73 : 10 txs 
-polled block 74 : 10 txs 
-polled block 75 : 10 txs 
-polled block 76 : 10 txs 
-polled block 77 : 10 txs 
-polled block 78 : 10 txs 
-polled block 79 : 10 txs 
-polled block 80 : 10 txs 
-polled block 81 : 10 txs 
-polled block 82 : 10 txs 
+SLEEP TIME: 1.38417
+polled block 5 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.162768
+polled block 6 : 53 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0450116
+polled block 7 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.142128
+polled block 8 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.07132
+polled block 9 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.255258
+polled block 10 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0917467
+polled block 11 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0339111
+polled block 12 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.165959
+polled block 13 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.100519
+polled block 14 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0923531
+polled block 15 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0914067
+polled block 16 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0419206
+polled block 17 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.00844922
+polled block 18 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.101098
+polled block 19 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.057888
+polled block 20 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.053159
+polled block 21 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0420387
+polled block 22 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0824764
+polled block 23 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0330258
+polled block 24 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.232289
+polled block 25 : 49 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0585565
+polled block 26 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0501716
+polled block 27 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.000726846
+polled block 28 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.00871713
+polled block 29 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0065392
+polled block 30 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0143473
+polled block 31 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0267716
+polled block 32 : 49 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0821483
+polled block 33 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0137961
+polled block 34 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0920099
+polled block 35 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0909949
+polled block 36 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0745824
+polled block 37 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.10628
+polled block 38 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0171379
+polled block 39 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.174832
+polled block 40 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0658238
+polled block 41 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.163945
+polled block 42 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.0605602
+polled block 43 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.000204894
+polled block 44 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0252051
+polled block 45 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.00937831
+polled block 46 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.132818
+polled block 47 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.105663
+polled block 48 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.289279
+polled block 49 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.202558
+polled block 50 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0239845
+polled block 51 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.103334
+polled block 52 : 49 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0585071
+polled block 53 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.218114
+polled block 54 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0265238
+polled block 55 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.00581315
+polled block 56 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: -0.033282
+polled block 57 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0659087
+polled block 58 : 52 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.148185
+polled block 59 : 50 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0506728
+polled block 60 : 51 txs 
+In the last 2s, tx count = 0 latency = 0 outstanding request = 0
+SLEEP TIME: 0.0154075

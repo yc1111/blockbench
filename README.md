@@ -1,13 +1,8 @@
-# BlockBench
+# Performance Benchmarking of Private Blockchain Systems
 
-BlockBench is the first benchmarking framework for private blockchain systems.
-It serves as a fair means of comparison for different platforms and enables deeper understanding
-of different system design choices.
+The performance of blockchain systems is a critical issue. To understand the performance bottleneck of the blockchainsystems, and the performance implications according to different design choices and system parameters, we have bench-marked two prevalent blockchain systems, Hyperledger v1.3 and Quorum v2.1.0. It has been studied throughput, latency and scalability of the systems by using a suite of macro andmicro benchmarks under various range of system settings. Comparison against previously benchmarked blockchain systems under same settings has been carried on, and some interesting insights were deduced from it.
 
-BlockBench comes with both [macro benchmark workloads](src/macro) for evaluating the overall performance and
-[micro benchmark workloads](src/micro) for evaluating performance of individual layers. 
-
-## Workloads 
+## Benchmark Workloads 
 
 ### Macro-benchmark
 
@@ -17,32 +12,20 @@ BlockBench comes with both [macro benchmark workloads](src/macro) for evaluating
 ### Micro-benchmark
 
 * DoNothing (consensus layer).
-* IOHeavy (data model layer, read/write oriented).
-* Analytics (data model layer, analytical query oriented).
+* Analytics (data model layer).
 * CPUHeavy (execution layer).
 
 ## Source file structure
 
-+ Smart contract sources are in [benchmark/contracts](benchmark/contracts) directory.
-+ Instructions and scripts to run benchmarks for Ethereum, Hyperledger , Parity and Quorum are in [ethereum](benchmark/ethereum),
-[hyperledger](benchmark/hyperledger) , [parity](benchmark/parity) , [quorum_raft](benchmark/quorum_raft) and [quorum_vote](benchmark/quorum_vote) directories respectively.
-+ Drivers for benchmark workloads are in [src](src) directory.
+* Smart contract sources are in [benchmark/contracts](benchmark/contracts) directory.
+* Drivers for benchmark workloads are in [src](src) directory.
+* Micro benchmarks workloads and scripts are in [src/micro](src/micro) for each blockchain system.
+* Macro benchmarks scripts are in [benchmark](benchmark) for each blockchain system.
 
 ## Dependency
 
 ### C++ libraries
 * [restclient-cpp](https://github.com/mrtazz/restclient-cpp)
-
-  Note: we patched this library to include the "Expect: " header in POST requests, which considerably improves the speed for
-  processing RPC request at Parity. 
-
-    + The patch file is include in [benchmark/parity](benchmark/parity) folder.
-    + To patch: go to top-level directory of restclient-cpp, then:
-
-        `patch -p4 < $BLOCK_BENCH_HOME/benchmark/parity/patch_restclient`
-
-    + The installation can then proceed as normal. 
-
 * [libcurl](https://curl.haxx.se/libcurl/)
 
 ### Node.js libraries
@@ -51,8 +34,31 @@ Go to [micro](src/micro) directory and use `npm install` to install the dependen
 * [zipfian](https://www.npmjs.com/package/zipfian)
 * [bignumber.js](https://www.npmjs.com/package/bignumber.js)
 
-### Blockchain 
-* [geth(ethereum)](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu)
-* [geth(parity)](https://github.com/paritytech/parity/wiki/Setup)
-* [geth(quorum)](https://github.com/jpmorganchase/quorum/wiki/Getting-Set-Up)
-* [hyperledger](https://github.com/hyperledger/fabric/tree/v0.6)
+### Install
+
+## Quorum
+* Go to [benchmark/quorum_raft/quorum](benchmark/quorum_raft/quorum) directory and use `make` to build the geth executable
+
+## Hyerledger v1.3
+
+### Running the Macro Benchmark
+
+## Quorum Raft
+* Go to [benchmark/quorum_raft](benchmark/quorum_raft) directory
+* Modify the file `env.sh` to choose the YCSB or Smallbank by uncommenting and commetting the respective lines
+* Run  `run-bench.sh <n_servers> <n_threads> <n_clients> <tx_rate>` to run the network and the macro benchmark
+
+## Quorum IBFT
+* Go to [benchmark/quorum_ibft](benchmark/quorum_ibft) directory
+* Modify the file `env.sh` to choose the YCSB or Smallbank by uncommenting and commetting the respective lines
+* Run  `run-bench.sh <n_servers> <n_threads> <n_clients> <tx_rate>` to run the network and the macro benchmark
+
+## Hyperledger v1.3 
+
+### Running the Micro Benchmark
+
+## Quorum
+* Go to [src/micro/quorum_script](src/micro/quorum_script) directory
+* Run the single node by executing `start_client.sh`
+* On another terminal, go to the folder of the benchmark you intend to run located at [src/micro/<benchmark_name>](src/micro)
+* See the Readme for the instructions relative to that micro benchmark

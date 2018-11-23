@@ -15,7 +15,7 @@ HOSTS=$HL_HOME/hosts
 CLIENTS=$HL_HOME/clients
 
 # HL_DATA can be shared among hosts. By default, we set it to ./data
-HL_DATA=$HL_HOME/data
+HL_DATA=/data/yuecong
 
 # Hyperledger fabric source folder (install.sh puts go in $HL_DATA)
 HL_SOURCE=$HL_DATA/go/src/github.com/hyperledger/fabric
@@ -24,9 +24,7 @@ HL_SOURCE=$HL_DATA/go/src/github.com/hyperledger/fabric
 LOG_DIR=$HL_HOME/logs
 
 # Define benchmark, which can be: donothing, ycsb or smallbank
-BENCHMARK=donothing
-# BENCHMARK=ycsb
-# BENCHMARK=smallbank
+BENCHMARK=ycsb
 
 # For ycsb and donothing, the driver is in src/macro/kvstore
 EXE_HOME=$HL_HOME/../../src/macro/kvstore
