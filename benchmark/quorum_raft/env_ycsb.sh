@@ -1,14 +1,11 @@
-QUO_HOME=~/blockchain-perf/benchmark/quorum_raft
+QUO_HOME=/users/yc/blockbench/benchmark/quorum_raft
+QUO_DATA=/data/yc/quorum_raft
+BENCHMARK=ycsb
+EXE_HOME=$QUO_HOME/../../src/macro/kvstore
+
+#####################################################
 HOSTS=$QUO_HOME/hosts
 CLIENTS=$QUO_HOME/clients
-QUO_DATA=/data/fuwanzeng/quorum_raft
-LOG_DIR=$QUO_HOME/../data/raft
-EXE_HOME=$QUO_HOME/../../src/macro/kvstore
-BENCHMARK=ycsb
-QUORUM=~/download/quorum/build/bin/geth
+QUORUM=$QUO_HOME/quorum/build/bin/geth
 ADDRESSES=$QUO_HOME/addresses
-
-##comment these out for smallbank
-#EXE_HOME=$QUO_HOME/../../src/macro/smallbank
-#BENCHMARK=smallbank 
-#LOG_DIR=$QUO_HOME/smallbank_results_2
+LOG_DIR=$QUO_HOME/logs/${BENCHMARK}results_1

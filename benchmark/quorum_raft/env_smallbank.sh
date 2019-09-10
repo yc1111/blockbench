@@ -1,7 +1,7 @@
 QUO_HOME=/users/yc/blockbench/benchmark/quorum_raft
 QUO_DATA=/data/yc/quorum_raft
-BENCHMARK=donothing
-EXE_HOME=$QUO_HOME/../../src/macro/kvstore
+BENCHMARK=smallbank
+EXE_HOME=$QUO_HOME/../../src/macro/smallbank
 
 #####################################################
 HOSTS=$QUO_HOME/hosts
