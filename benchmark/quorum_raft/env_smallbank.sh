@@ -1,5 +1,6 @@
 QUO_HOME=/users/yc/blockbench/benchmark/quorum_raft
 QUO_DATA=/data/yc/quorum_raft
+GO_PATH=/data/yc
 BENCHMARK=smallbank
 EXE_HOME=$QUO_HOME/../../src/macro/smallbank
 
