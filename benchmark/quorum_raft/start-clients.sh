@@ -6,9 +6,9 @@ cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
 #..
-export CPATH=/users/yc/local/include:/users/dinhtta/local/include
-export LIBRARY_PATH=/users/yc/local/lib:/users/dinhtta/local/lib:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/users/yc/local/lib:/users/dinhtta/local/lib:$LD_LIBRARY_PATH
+export CPATH=/users/dinhtta/local/include
+export LIBRARY_PATH=/users/dinhtta/local/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/users/dinhtta/local/lib:$LD_LIBRARY_PATH
 #..
 
 #LOG_DIR=$ETH_HOME/../src/ycsb/exp_$3"_"servers_run4
