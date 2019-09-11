@@ -1,6 +1,23 @@
 #!/bin/bash
+
+. env.sh
+
+# Install go
+export GOROOT=$QUO_HOME/go
+export PATH=$GOROOT/bin:$PATH
+export GOPATH=$GO_PATH
+export PATH=$GOPATH/bin:$PATH
+if ! [ `command -v go` ]; then
+  mkdir -p go
+  wget https://dl.google.com/go/go1.9.3.linux-amd64.tar.gz
+  tar -xzvf go1.9.3.linux-amd64.tar.gz
+  rm go1.9.3.linux-amd64.tar.gz
+fi
+
 # installing quorum
-git clone https://github.com/jpmorganchase/quorum.git
+if ! [ -d quorum ]; then
+  git clone https://github.com/jpmorganchase/quorum.git
+fi
 cd quorum
 make all
 
